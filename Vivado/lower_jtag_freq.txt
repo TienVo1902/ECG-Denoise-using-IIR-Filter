@@ -1,0 +1,13 @@
+open_hw
+connect_hw_server
+
+open_hw_target
+
+get_hw_devices
+
+set dev [lindex [get_hw_devices xc7z010*] 0]
+current_hw_device $dev
+
+set tgt [lindex [get_hw_targets] 0]
+current_hw_target $tgt
+set_property PARAM.FREQUENCY 3000000 $tgt
